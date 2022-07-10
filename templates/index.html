@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>status-check</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', path='/styles.css') }}">
+    <style>
+        .tooltipss {
+          background-color: black;
+          color: rgb(0, 180, 255);
+          padding: 5px 10px;
+          border: rgb(0, 180, 255) solid 2px;
+          border-radius: 5px;
+          font-size: 13px;
+          width: max-content;
+        }
+      </style>
+</head>
+
+<body style="background: rgb(0,0,0);color: rgb(0, 180, 255);">
+    <div class="container" id="navbar-container" style="margin-top: 27px;padding: 0px 0px;">
+        <nav class="navbar navbar-light navbar-expand-md" style="border-style: solid;border-color: rgb(0, 180, 255);border-radius: 7px;">
+            <div class="container-fluid"><a class="navbar-brand" href="/" style="color: rgb(0, 180, 255);">restatus</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link active" href="https://github.com/" style="color: rgb(0, 180, 255);">github</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://www.buymeacoffee.com/resetxd" style="color: rgb(0, 180, 255);">donate</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://discord.gg/HMF77Xf88J" style="color: rgb(0, 180, 255);">discord</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="container" id="main-container" style="border-style: solid;border-radius: 7px;margin-top: 42px;padding-bottom: 71px;">
+        <div>
+            <h1 style="text-align: center;font-weight: bold;">STATUS PAGE RESETAPI</h1>
+        </div>
+        <hr style="opacity: 1;">
+        {{operational | safe}}
+        {{status_page_content | safe}}
+    </div>
+    <footer id="main-footer" style="margin-top: 68px;">
+        <div>
+            <hr style="opacity: 1;">
+            <p style="text-align: center;font-weight: bold;">©2022 reset<br></p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script>
+        {{asc | safe}}
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
